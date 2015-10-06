@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         id="propertiesBuilder"
+         name="BeautySunflower Native2ASCII Properties Builder"
+         point="org.eclipse.core.resources.builders">
+      <builder
+            hasNature="true">
+         <run
+               class="com.beautysunflower.plugin.eclipse.native2ascii.builder.PropertiesBuilder">
+         </run>
+      </builder>
+   </extension>
+   <extension
+         id="propertiesNature"
+         name="BeautySunflower Native2ASCII Properties Nature"
+         point="org.eclipse.core.resources.natures">
+      <runtime>
+         <run
+               class="com.beautysunflower.plugin.eclipse.native2ascii.builder.PropertiesNature">
+         </run>
+      </runtime>
+      <builder
+            id="com.beautysunflower.plugin.eclipse.native2ascii.propertiesBuilder">
+      </builder>
+   </extension>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            adaptable="true"
+            objectClass="org.eclipse.core.resources.IProject"
+            nameFilter="*"
+            id="com.beautysunflower.plugin.eclipse.native2ascii.contribution1">
+         <action
+               label="Add/Remove BeautySunflower Native2ASCII Properties Nature"
+               class="com.beautysunflower.plugin.eclipse.native2ascii.builder.ToggleNatureAction"
+               menubarPath="additions"
+               enablesFor="+"
+               id="com.beautysunflower.plugin.eclipse.native2ascii.addRemoveNatureAction">
+         </action>
+      </objectContribution>
+   </extension>
+   <extension
+         id="xmlProblem"
+         name="XML Problem"
+         point="org.eclipse.core.resources.markers">
+      <super
+            type="org.eclipse.core.resources.problemmarker">
+      </super>
+      <persistent
+            value="true">
+      </persistent>
+   </extension>
+
+</plugin>

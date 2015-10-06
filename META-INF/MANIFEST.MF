@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: com.beautysunflower.plugin.eclipse.native2ascii
+Bundle-SymbolicName: com.beautysunflower.plugin.eclipse.native2ascii; singleton:=true
+Bundle-Version: 1.0.0.v20151003
+Bundle-Activator: com.beautysunflower.plugin.eclipse.native2ascii.Activator
+Bundle-Vendor: BeautySunflower.COM
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.core.resources
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
+Import-Package: org.eclipse.jdt.core
